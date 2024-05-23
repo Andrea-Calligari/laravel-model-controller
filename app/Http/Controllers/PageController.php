@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movie;
-use Illuminate\Http\Request;
+ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
@@ -11,8 +11,8 @@ class PageController extends Controller
     {
 
         $movies = Movie::all();
-        dd($movies);
-        return view('index', compact('movies'));
+        //  dd($movies);
+        return view('pages.welcome', compact('movies'));
 
     }
 }
